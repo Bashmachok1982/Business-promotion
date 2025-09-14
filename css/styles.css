@@ -1873,13 +1873,18 @@ body.pricing .promo-btn {
 }
 
 /* Светлая (по умолчанию) */
-body.product {
+body.product,
+body.pricing,
+body.customer,
+body.resources {
   background: #fff;
-  color: #2e3a59;
+  color: #22343d;
 }
 
 /* Тёмная */
-body.product.dark-theme {
+/*body.product.dark-theme,
+body.pricing.dark-theme,
+body.customer.dark-theme,
+body.resources.dark-theme {
   background: #1f2e35;
-  color: #fff;
-}
+  color: #fff;}*/
