@@ -1,0 +1,1885 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: #22343d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+button {
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  gap: 73px;
+  flex-wrap: nowrap; /* Запрещаем перенос элементов */
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 237px;
+}
+.logo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 93%;
+  color: #173a56;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-list {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+.header-link {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: #22343d;
+  padding-bottom: 26px;
+  padding-top: 26px;
+  display: block;
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.header-link:hover,
+.header-link:focus,
+.header-link:active {
+  transform: scale(1.1);
+}
+.current {
+  font-weight: 600;
+}
+.header-list-btn {
+  display: flex;
+  gap: 21px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.header-btn-in {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #173a56;
+  min-width: 105px;
+  height: 42px;
+  border: 1px solid #bcd0e5;
+  background: #fff;
+  transition-property: box-shadow, background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+}
+.header-btn-in:hover,
+.header-btn-in:focus,
+.header-btn-in:active {
+  transform: scale(1.1);
+  background-color: #e0dfdf;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.header-btn-up {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  width: 113px;
+  height: 42px;
+  background: #02897a;
+  transition-property: color, box-shadow, background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+}
+.header-btn-up:hover,
+.header-btn:focus,
+.header-btn:active {
+  transform: scale(1.1);
+  background-color: #02a087;
+  color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+/* C8 — подчёркивание текущей страницы */
+.header-link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  /*bottom: 0; /* расстояние от текста до полоски */
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #22343d;
+  bottom: -1px; /*добавил*/
+}
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  width: 32px;
+  height: 32px;
+  background: #f3f3f3;
+  transition-property: color, box-shadow, background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+  padding: 8px;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus,
+.theme-toggle:active {
+  transform: scale(1.1);
+
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.theme-icon {
+  width: 24px;
+  height: 24px;
+}
+#hero .container {
+  display: flex;
+  align-items: center; /* выравниваем по вертикали */
+  justify-content: space-between; /* отталкиваем контент и картинку */
+  margin-bottom: 100px;
+}
+.hero-content {
+  flex: 1; /* занимает доступное место слева */
+  max-width: 452px;
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #22343d;
+  margin-bottom: 18px;
+}
+.hero-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: #22343d;
+  margin-bottom: 45px;
+}
+.hero-btn {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  align-items: center;
+}
+.hero-btn-getstart {
+  background: #02897a;
+  border-radius: 4px;
+  width: 178px;
+  height: 53px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+.hero-btn-watch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* расстояние между треугольником и текстом */
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #02897a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.hero-btn-watch::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 12px solid #02897a; /* цвет треугольника */
+  border-top: 7px solid transparent; /* верхний край */
+  border-bottom: 7px solid transparent; /* нижний край */
+  border-radius: 2px;
+  fill: #02887a;
+}
+.hero-btn-getstart:hover,
+.hero-btn-getstart:focus,
+.hero-btn-getstart:active {
+  transform: scale(1.1);
+  background-color: #02a087;
+  color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.hero-btn-watch:hover,
+.hero-btn-watch:focus,
+.hero-btn-watch:active {
+  transform: scale(1.1);
+  background-color: #02a087;
+  color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px; /* отступ сверху */
+  margin-left: 35px; /* отступ слева от контента */
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.feature-title {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: #22343d;
+  margin-bottom: 50px;
+}
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+.feature-list-item {
+  display: flex;
+  flex-direction: column;
+  width: calc((100%-3 * 30px) / 4);
+  align-items: flex-start;
+}
+.feature-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.feature-icon-wrap i {
+  font-size: 20px;
+  color: #fff; /* сама иконка белая */
+}
+.feature-icon-wrap.green {
+  background: #02897a;
+} /* стрелка */
+.feature-icon-wrap.blue {
+  background: #4d8dff;
+} /* цепь */
+.feature-icon-wrap.purple {
+  background: #740a76;
+} /* сердце */
+.feature-icon-wrap.red {
+  background: #f03e3d;
+} /* часы */
+.feature-subtitle {
+  font-weight: 600;
+  font-size: 22px;
+  color: #22343d;
+  margin-bottom: 13px;
+  margin-top: 18px;
+}
+.feature-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+}
+.feature-btn {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background: #02897a;
+  border-radius: 4px;
+  width: 175px;
+  height: 53px;
+  transition-property: box-shadow, background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+}
+.feature-btn:hover,
+.feature-btn:focus,
+.feature-btn:active {
+  transform: scale(1.1);
+  background-color: #02a087;
+  color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+#management .container {
+  display: flex;
+  align-items: center; /* выравниваем по вертикали */
+  justify-content: space-between; /* отталкиваем контент и картинку */
+  margin-bottom: 100px;
+}
+.management-content {
+  flex: 1; /* занимает доступное место слева */
+  max-width: 486px;
+}
+.management-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #22343d;
+  margin-bottom: 25px;
+}
+.management-subtitle {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+}
+.management-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+}
+.management-list {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.management-subtitle-item {
+  margin-bottom: 12px;
+}
+.management-image {
+  max-width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px; /* отступ сверху */
+  margin-left: 84px; /* отступ слева от контента */
+}
+
+.management-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#support .container {
+  display: flex;
+  align-items: center; /* выравниваем по вертикали */
+  justify-content: space-between; /* отталкиваем контент и картинку */
+  margin-bottom: 100px;
+}
+.support-content {
+  max-width: 450px;
+}
+.support-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #22343d;
+  margin-bottom: 25px;
+}
+.support-subtitle {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+}
+.support-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+}
+.support-list {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+.support-list-item {
+  display: flex;
+  align-items: flex-start; /* иконка сверху с текстом */
+  gap: 30px;
+}
+.support-list-item .support-text {
+  margin: 0; /* убираем лишние отступы абзаца */
+}
+/* контейнер квадратика */
+.icon-box {
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  border: 2.92px solid #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 35px; /* фиксированный размер */
+  /* по умолчанию фон — чтобы не был прозрачным */
+  background: #f90;
+}
+/* svg внутри — белая галочка */
+.icon-box .support-icons {
+  width: 12px;
+  height: 12px;
+  display: block;
+  fill: #fff; /* если иконка построена через path и наследует fill */
+  stroke: none;
+}
+/* индивидуальные цвета для каждого пункта (1-й, 2-й, 3-й) */
+.support-list-item:nth-child(1) .icon-box {
+  background: #f90;
+}
+.support-list-item:nth-child(2) .icon-box {
+  background: #f03e3d;
+}
+.support-list-item:nth-child(3) .icon-box {
+  background: #4d8dff;
+}
+
+.support-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 84px; /* отступ слева от контента */
+}
+
+.support-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#collaboration .container {
+  display: flex;
+  align-items: center; /* выравниваем по вертикали */
+  justify-content: space-between; /* отталкиваем контент и картинку */
+  margin-bottom: 150px;
+}
+.collaboration-content {
+  flex: 1; /* занимает доступное место слева */
+  max-width: 486px;
+}
+.collaboration-subtitle {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+}
+.collaboration-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #22343d;
+  margin-bottom: 25px;
+}
+.collaboration-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+}
+.collaboration-list {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.collaboration-subtitle-item {
+  margin-bottom: 12px;
+}
+.collaboration-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px; /* отступ сверху */
+  margin-left: 84px; /* отступ слева от контента */
+}
+
+.collaboration-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.staff-title {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: #22343d;
+  margin-bottom: 25px;
+}
+.staff-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  color: #22343d;
+  max-width: 542px;
+  margin: 0 auto;
+}
+.staff-list {
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Разрешаем перенос на новые строки */
+  gap: 30px; /* Уменьшаем gap для лучшего размещения */
+  justify-content: space-between; /* Равномерное распределение в ряду */
+}
+.staff-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Одинаковое расстояние 10px между изображением и текстом */
+}
+.staff-list-text {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #2f281e;
+  width: 281px; /* Фиксированная ширина */
+  height: 50px; /* Фиксированная высота */
+  background: #fff; /* Фон белый */
+  box-shadow: 2px 2px 10px 0 rgba(23, 58, 86, 0.15); /* Тень, как в SVG */
+  border-radius: 50px; /* Закругление углов, адаптировано под макет */
+  display: flex; /* Для центрирования текста внутри */
+  align-items: center; /* Вертикальное центрирование текста */
+  justify-content: center; /* Горизонтальное центрирование текста */
+}
+/* Первый и четвёртый элементы: изображение слева, текст справа */
+.first-item,
+.fourth-item {
+  flex-direction: row-reverse;
+}
+
+/* Второй и третий элементы: текст слева, изображение справа */
+.second-item,
+.third-item {
+  flex-direction: row;
+}
+
+/* Убираем margin-right для .second-item,.third-item, чтобы не было двойного отступа */
+.second-item,
+.third-item .staff-list-text {
+  margin-right: 0;
+}
+.staff-btn {
+  border-radius: 4px;
+  width: 216px;
+  height: 53px;
+  background: #02897a;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  transition-property: color, box-shadow, background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+  display: block;
+  margin: 50px auto 100px auto;
+  text-align: center;
+}
+.staff-btn:hover,
+.staff-btn:focus,
+.staff-btn:active {
+  transform: scale(1.1);
+  background-color: #02a087;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.news-title {
+  font-weight: 700;
+  font-size: 34px;
+  color: #22343d;
+  margin-bottom: 10px;
+}
+.news-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+  margin-bottom: 40px;
+  max-width: 465px;
+}
+.span-text {
+  font-weight: 700;
+}
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* отступы между карточками */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.news-list-content {
+  flex-grow: 1;
+  padding: 24px 16px 40px; /* твои внутренние отступы */
+  box-sizing: border-box;
+}
+.news-list-item {
+  width: calc((100% - 60px) / 3); /* 3 карточки в ряд, 2 промежутка по 30px */
+  box-sizing: border-box; /* паддинги внутрь */
+  min-width: 0; /* не даём контенту раздвигать блок */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.news-list-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.news-subtitle-text {
+  margin-bottom: 12px;
+}
+
+.news-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.66667;
+  color: #22343d;
+}
+.news-link:hover,
+.news-link:focus,
+.news-link:active {
+  color: #02897a;
+}
+.pricing-title {
+  font-weight: 700;
+  font-size: 34px;
+  color: #22343d;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 170px;
+}
+.pricing-text {
+  font-weight: 500;
+  font-size: 16px;
+  color: #22343d;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.pricing-lists {
+  display: flex;
+  gap: 72px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.pricing-list-content {
+  width: calc((100% - 144px) / 3);
+  align-items: center;
+  border-radius: 8px;
+  width: 322px;
+  height: 456px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  color: #22343d;
+}
+/* акцентная карточка */
+.pricing-list-content.featured {
+  background: #02897a; /* зелёный фон */
+  color: #fff; /* белый текст */
+}
+.pricing-list-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.66667;
+  color: #22343d;
+  text-align: center;
+  margin-top: 32px;
+}
+.pricing-list-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.5;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.price-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.375;
+  letter-spacing: 0.01em;
+  color: #22343d;
+}
+.pricing-btn {
+  border-radius: 8px;
+  width: 139px;
+  height: 44px;
+  background: #02897a;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.pricing-btn:hover,
+.pricing-btn:focus {
+  background-color: #02a087;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.pricing-list {
+  display: flex; /* делаем 0 и второй блок в ряд */
+  align-items: center;
+  justify-content: center; /* центрируем всё */
+  gap: 8px; /* расстояние между 0 и колонкой справа */
+  margin-bottom: 16px;
+  padding: 0;
+  list-style: none;
+}
+body.pricing .pricing-subtitle-text {
+  margin: 50px auto 32px auto;
+  font-size: 24px;
+  font-weight: 600;
+  color: #22343d;
+  text-align: center;
+}
+body.pricing .pricing-title {
+  margin: 32px auto 16px auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  color: #22343d;
+}
+body.pricing .pricing-text {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #22343d;
+}
+body.pricing .pricing-lists {
+  margin-bottom: 150px;
+}
+.first-item {
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 1.31579;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #02897a;
+}
+.pricing-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* текст прижат влево относительно $ */
+}
+.second-item {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: 0em;
+  color: #02897a;
+}
+.third-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.1875;
+  letter-spacing: 0.01em;
+  color: #afafaf;
+}
+.price-list {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.375;
+  letter-spacing: 0.01em;
+  color: #22343d;
+}
+.pricing-list-content.featured .first-item,
+.pricing-list-content.featured .second-item,
+.pricing-list-content.featured .third-item,
+.pricing-list-content.featured .pricing-list-subtitle,
+.pricing-list-content.featured .pricing-list-text,
+.pricing-list-content.featured .price-item-text {
+  color: #fff;
+}
+
+/* кнопка в акцентной */
+.pricing-list-content.featured .pricing-btn {
+  background: #fff; /* белая */
+  color: #02897a; /* зелёный текст */
+}
+.pricing-list-content.featured .pricing-btn:hover {
+  background: #f0f0f0; /* лёгкий серый при ховере */
+}
+.feedback-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.78125;
+  letter-spacing: 0.01em;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.feedback-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #22343d;
+  text-align: center;
+  max-width: 537px;
+  margin: 0 auto;
+}
+
+.feedback-list {
+  display: flex;
+  gap: 64px;
+}
+.feedback-list-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  color: #737373;
+  margin-bottom: 16px;
+}
+.feedback-list-item {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 30px 26px;
+  width: 327px; /* ширина карточки */
+  height: 240px;
+  background: #fff;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column; /* чтобы элементы шли сверху вниз */
+  justify-content: flex-start;
+  align-items: flex-start; /* выравниваем содержимое по левому краю */
+}
+.feedback-subtitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #02897a;
+}
+.feedback-item-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.01em;
+  color: #252b42;
+}
+.feedback-author {
+  display: flex;
+  align-items: center;
+  margin-top: 16px; /* отступ сверху от текста */
+}
+.feedback-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.feedback-author-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px; /* отступ между картинкой и текстом */
+}
+.feedback-rating {
+  display: flex;
+  gap: 4px; /* расстояние между звёздами */
+  margin-bottom: 16px; /* отступ от рейтинга до текста отзыва */
+}
+
+.star {
+  width: 19px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: #fbbf24; /* жёлтый для закрашенной */
+}
+
+.star:last-child {
+  fill: #d1d5db; /* серый для пустой */
+}
+.promo-content {
+  border-radius: 32px;
+  width: 968px;
+  height: 345px;
+  background: #02897a;
+  display: flex;
+  margin: 100px auto;
+}
+.promo-title-btn {
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение заголовка и кнопки */
+  justify-content: center; /* Центрируем по вертикали */
+  padding: 46px 10px 46px 46px;
+}
+.promo-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.514;
+  color: #fff;
+  max-width: 510px;
+  margin-bottom: 46px;
+}
+.promo-btn {
+  border-radius: 8px;
+  width: 150px;
+  height: 50px;
+  background: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  transition-property: box-shadow, background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+}
+/* Специфичные стили для каждой страницы */
+body.product .promo-btn {
+  color: #02897a; /* Зелёный текст для Product-page */
+}
+
+body.customer .promo-btn,
+body.pricing .promo-btn {
+  color: #22343d;
+}
+
+.promo-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 8px 46px 8px 10px;
+}
+.promo-btn:hover,
+.promo-btn:focus {
+  color: #02897a;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 40px;
+  color: #22343d;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  text-align: center;
+}
+.clients-list {
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 120px;
+  justify-content: center;
+  padding: 0;
+}
+.clients-list-item {
+  list-style: none; /* Убираем маркеры списка */
+}
+.clients-icons {
+  display: block;
+  max-width: 100%; /* чтобы не вылезали за контейнер */
+  height: auto; /* сохраняем пропорции */
+}
+#choice {
+  background: #f5f5f5;
+  padding: 100px 0;
+}
+.choice-title {
+  font-weight: 700;
+  font-size: 34px;
+  text-align: center;
+  color: #22343d;
+  margin-bottom: 50px;
+}
+.choice-list {
+  display: flex;
+  gap: 30px;
+}
+.choice-list-item {
+  width: calc((100% - 60px) / 3); /* три карточки */
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px; /* сверху до иконки */
+  padding-bottom: 34px; /* от текста вниз */
+  text-align: center;
+}
+.choice-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.375;
+  color: #22343d;
+  margin-bottom: 16px; /* подзаголовок → текст */
+  white-space: normal; /* чтобы длинный текст переносился */
+}
+.choice-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6875;
+  letter-spacing: 0.01em;
+  color: #22343d;
+  max-width: 275px;
+  margin: 0; /* убрать лишние отступы */
+}
+.choice-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px; /* иконка → подзаголовок */
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.choice-icon-wrap i {
+  font-size: 20px;
+  color: #fff; /* сама иконка белая */
+}
+.choice-icon-wrap.green {
+  background: #02897a;
+}
+.choice-icon-wrap.blue {
+  background: #4d8dff;
+}
+.choice-icon-wrap.red {
+  background: #f03e3d;
+}
+
+.work-title {
+  font-weight: 700;
+  font-size: 34px;
+  text-align: center;
+  color: #22343d;
+  margin-bottom: 72px;
+  margin-top: 100px;
+}
+.work-info {
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.work-list {
+  display: flex;
+  flex-direction: column; /* столбиком */
+  gap: 100px; /* отступ между шагами */
+  margin-bottom: 76px;
+}
+.work-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px; /* расстояние между картинкой и текстом */
+}
+/* Четные шаги (меняем порядок) */
+.work-list-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.work-img {
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+.work-subtitle-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #22343d;
+  margin-bottom: 16px;
+}
+.work-sudtitle {
+  font-weight: 600;
+  font-size: 24px;
+  color: #22343d;
+  margin-bottom: 16px;
+}
+.work-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #22343d;
+}
+.work-btn {
+  border-radius: 8px;
+  width: 224px;
+  height: 44px;
+  background: #02897a;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  transition-property: color, box-shadow, background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+  display: block;
+  margin: 0 auto;
+}
+.work-btn:hover,
+.work-btn:focus,
+.work-btn:active {
+  transform: scale(1.1);
+  background-color: #02a087;
+  color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+#joinus {
+  background: linear-gradient(180deg, #f5f5f5 0%, rgba(245, 245, 245, 0) 100%);
+  margin-top: 115px;
+  margin-bottom: 150px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.joinus-content {
+  display: flex;
+  gap: 256px;
+  justify-content: center;
+}
+.joinus-title {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: #22343d;
+  max-width: 537px;
+  margin: 0 auto 96px;
+}
+.joinus-subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16667;
+  color: #000;
+  margin-top: 30px;
+}
+.joinus-subtitle-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #000;
+  text-align: center;
+}
+.joinus-list {
+  display: flex;
+  flex-direction: column;
+}
+.joinus-business,
+.joinus-enterprise {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем контент внутри столбцов */
+  max-width: 300px; /* Ограничиваем ширину для текста */
+}
+.joinus-subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16667;
+  color: #000;
+  margin: 20px 0 10px; /* Отступы для подзаголовка */
+}
+.joinus-list-item {
+}
+.joinus-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.77778;
+  text-align: center;
+  color: #22343d;
+  margin-bottom: 10px; /* Отступ перед дополнительным текстом */
+}
+#enterprise {
+  background: linear-gradient(180deg, #f6f6f6 0%, rgba(246, 246, 246, 0) 100%);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.enterprise-subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.enterprise-title {
+  font-weight: 700;
+  font-size: 34px;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.enterprise-text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.enterprise-btn {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 8px;
+  width: 224px;
+  height: 44px;
+  background: #02897a;
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.enterprise-btn:hover,
+.enterprise-btn:focus {
+  background-color: #02a087;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+#effects {
+  margin: 150px 0;
+}
+
+.effects-title {
+  font-weight: 700;
+  font-size: 34px;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.effects-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+.effects-image {
+  width: 528px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.effects-list {
+  width: 542px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.effects-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px; /* Добавлен отступ перед текстом */
+}
+
+.effects-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background: #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.effects-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.effects-subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  color: #22343d;
+  margin: 0;
+}
+
+.effects-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #22343d;
+  margin: 0;
+  flex: 1;
+  max-width: 100%;
+}
+
+.question-title {
+  font-weight: 700;
+  font-size: 34px;
+  color: #22343d;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.question-text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #22343d;
+  text-align: center;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* полоски будут сами разделять */
+  margin: 50px auto 0 auto;
+  max-width: 920px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.question-list-item {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 16px 0;
+}
+
+.question-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.question-subtitle {
+  font-weight: 500;
+  font-size: 18px;
+  color: #22343d;
+  margin: 0;
+}
+
+.question-answer {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #22343d;
+  line-height: 1.4;
+}
+
+.stories-title {
+  font-weight: 700;
+  font-size: 34px;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.stories-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #22343d;
+  text-align: center;
+}
+#stories {
+  margin: 80px auto;
+}
+.stories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 0;
+  list-style: none;
+  margin: 32px 0;
+}
+.stories-list-item {
+  width: calc((100% - 64px) / 3); /* 3 карточки в ряд, 2 промежутка по 30px */
+  box-sizing: border-box; /* паддинги внутрь */
+  min-width: 0; /* не даём контенту раздвигать блок */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  width: 348px;
+  height: 359px;
+}
+.stories-list-content {
+  flex-grow: 1;
+  padding: 24px 16px 40px; /* твои внутренние отступы */
+  box-sizing: border-box;
+}
+
+.stories-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #22343d;
+}
+
+.stories-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.66667;
+  color: #22343d;
+}
+.stories-link:hover,
+.stories-link:focus,
+.stories-link:active {
+  color: #02897a;
+}
+.stories-end-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.44444;
+  color: #22343d;
+  text-decoration: none;
+
+  width: fit-content; /* ссылка подстраивается по ширине контента */
+  margin: 0 auto; /* а потом ставим по центру */
+}
+.stories-end-link:hover,
+.stories-end-link:focus {
+  color: #02897a;
+}
+
+.stories-end-link:hover .stories-end-icon path {
+  fill: #02897a; /* подсветка иконки при наведении */
+}
+#communications {
+  margin-top: 80px;
+}
+.communications-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+.communications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.communications-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.49;
+  letter-spacing: -0.03em;
+  color: #22343d;
+}
+.communications-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+  color: #22343d;
+}
+.communications-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #22343d;
+  border: 1px solid #eaeaea;
+  border-radius: 100px;
+  height: 66px;
+  border: none; /* Убираем границу input */
+  outline: none; /* Убираем outline при фокусе */
+
+  font-size: 16px;
+  width: 100%; /* Заполняет остальное пространство */
+  background: transparent; /* Прозрачный фон */
+  flex: 1; /* занимает всё оставшееся место */
+  padding: 12px;
+  max-width: calc(
+    100% - 127px
+  ); /* Уменьшаем ширину, учитывая кнопку (117px) и отступ (10px) */
+}
+.communications-btn {
+  border-radius: 100px;
+  width: 117px;
+  height: 50px;
+  background: #02897a;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  margin-right: 10px; /* Отступ 10px справа от инпута (для кнопки) */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.communications-btn:hover,
+.communications-btn:focus {
+  background-color: #02a087;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.span-count-text {
+  font-weight: 500;
+  color: #02897a;
+}
+.communications-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bcd0e5; /* Граница для "единого" вида */
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden; /* чтобы ничего не вылезало */
+  width: 100%; /* Ограничиваем общую ширину */
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.67647;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #252b42;
+  margin-bottom: 18px;
+}
+.form-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.55556;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #374754;
+}
+.form-list-icons {
+  gap: 20px; /*расстояние между кружками с иконками*/
+  display: flex;
+  padding: 0; /*обнуляем внутренние отступы у иконок*/
+  list-style: none;
+  margin: 56px auto;
+  justify-content: center;
+}
+
+.form-map {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.form-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.375;
+  letter-spacing: 0em;
+  color: #252b42;
+  margin: 48px auto;
+  text-align: center;
+}
+.form-input-box {
+  border: 1px solid #e8e8e8;
+  border-radius: 39px;
+  padding: 19px 20px;
+  width: 868px;
+  height: 670px;
+  margin: 100px auto;
+}
+.form-input-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* теперь элементы прижимаются влево */
+  gap: 45px;
+}
+.form-input {
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 39px;
+  padding: 19px 20px;
+  width: 768px;
+  height: 54px;
+  box-sizing: border-box;
+}
+.form-textarea {
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  padding: 23px 20px;
+  width: 768px;
+  height: 193px;
+  resize: none;
+  box-sizing: border-box;
+}
+.form-btn {
+  border-radius: 35px;
+  padding: 18px 38px;
+  width: 145px;
+  height: 52px;
+  background: #02897a;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.input-item.btn-input {
+  width: 768px; /* контейнер кнопки такой же ширины, как инпут */
+  display: flex; /* включаем flex внутри */
+  justify-content: flex-start; /* прижимаем кнопку влево внутри этого блока */
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  background-color: #02a087;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between; /*распределяет по главной оси веь контент*/
+  margin-bottom: 10px; /*отступ вниз до следующего элемента*/
+}
+.footer-list-icons {
+  display: flex;
+  gap: 16px; /*расстояние между кружками с иконками*/
+  padding: 0; /*обнуляем внутренние отступы у иконок*/
+  margin-top: 18px; /*отступ вверх от иконок до доготипа*/
+  list-style: none;
+}
+
+.footer-social-link,
+.form-social-link {
+  display: flex;
+  align-items: center; /*SVG-иконка внутри кружка*/
+  justify-content: center; /* SVG-иконка внутри кружка*/
+  width: 40px; /*ширина кружка иконки*/
+  height: 40px; /*высота кружка иконки*/
+  border-radius: 50%; /*закругление*/
+  background-color: #edfffc; /* Салатовый фон для круга */
+  transition-property: transform, background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.form-social-link {
+  width: 50px; /*ширина кружка иконки*/
+  height: 50px; /*высота кружка иконки*/
+}
+.footer-icons,
+.form-icons {
+  width: 24px; /*ширина самой соц иконки*/
+  height: 24px; /*высота самой соц иконки*/
+  fill: #02897a; /* Тёмный цвет для контраста с фоном */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-social-link:hover,
+.footer-social-link:focus,
+.form-social-link:hover,
+.form-social-link:focus {
+  transform: scale(1.1);
+  background-color: #d5f5f2; /* Чуть темнее при наведении */
+}
+.footer-resource-item {
+  display: flex;
+  flex-direction: column; /*размещаем элементы в столбик*/
+}
+.footer-resource-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #22343d;
+  margin: 0 0 8px 0; /*расстояние от заголовка до ссылок вниз*/
+}
+.footer-resource-link {
+  font-size: 16px;
+  color: #22343d;
+  text-decoration: none;
+  display: block;
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+}
+.footer-resource-link:hover,
+.footer-resource-link:focus,
+.footer-resource-link:active {
+  transform: scale(1.1);
+}
+.footer-legal-item {
+  display: flex;
+  flex-direction: column;
+}
+.footer-legal-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #22343d;
+  margin: 0 0 8px 0;
+}
+.footer-legal-link {
+  font-size: 16px;
+  color: #22343d;
+  text-decoration: none;
+  display: block;
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+}
+.footer-legal-link:hover,
+.footer-legal-link:focus,
+.footer-legal-link:active {
+  transform: scale(1.1);
+}
+.footer-energy-deal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 325px;
+}
+.footer-deal-text {
+  font-size: 16px;
+  margin: 0 0 30px 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #22343d;
+}
+.footer-btn {
+  font-size: 16px;
+  background-color: #02897a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  text-align: center;
+  width: auto; /* кнопка теперь только по контенту */
+  align-self: flex-start; /* чтобы не растягивалась */
+  height: 39px;
+  padding: 0 16px;
+  margin-top: 25px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #02a087;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.footer-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bcd0e5; /* Граница для "единого" вида */
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden; /* чтобы ничего не вылезало */
+  margin-bottom: 20px; /* чтобы кнопка не прилипала */
+}
+.footer-input-icons {
+  width: 18px;
+  height: 28px;
+  margin-left: 10px; /* Отступ иконки от края */
+  fill: #02897a; /* Зелёный цвет иконки */
+  flex-shrink: 0; /* запрет сжиматься */
+}
+.footer-input {
+  border: none; /* Убираем границу input */
+  outline: none; /* Убираем outline при фокусе */
+  padding: 10px 12px; /* убираем лишние отступы */
+  font-size: 16px;
+  width: 100%; /* Заполняет остальное пространство */
+  background: transparent; /* Прозрачный фон */
+  flex: 1; /* занимает всё оставшееся место */
+}
+.footer-input::placeholder {
+  color: #22343d;
+  opacity: 0.6;
+}
+.footer-copyright {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #22343d;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Светлая (по умолчанию) */
+body.product {
+  background: #fff;
+  color: #2e3a59;
+}
+
+/* Тёмная */
+body.product.dark-theme {
+  background: #1f2e35;
+  color: #fff;
+}
